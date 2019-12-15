@@ -52,20 +52,18 @@ def total_gross(source)
   # returned by directors_totals, and add it to a running total. When done,
   # return the total
   
-name = list_of_directors(source)
-total = directors_totals(source)
-
-index = 0 
-pp name
-#binding.pry
-gross_total = 0
-
-while index < source.count do 
-  director_names = name[index]
-  gross_total += total[director_names]
-  index += 1
-end
-
-gross_total
+  names = list_of_directors(source)
+  total = directors_totals(source)
+  
+  index = 0 
+  gross_total = 0
+  while index < source.count do
+ directors = names[index]
+ gross_total += total[directors]
+index +=1
+end 
+  
+  
+  gross_total
 end
 
